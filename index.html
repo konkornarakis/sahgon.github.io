@@ -22,9 +22,9 @@
       <header class="mb-auto pt-3">
         <h3 class="masthead-brand">Portofolio</h3>
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="#">Αρχική</a>
-          <a class="nav-link" href="#">Projects</a>
-          <a class="nav-link" href="#">Επικοινωνία</a>
+          <a class="nav-link active text-white" href="#">Αρχική</a>
+          <a class="nav-link text-white" href="#">Projects</a>
+          <a class="nav-link text-white" href="#">Επικοινωνία</a>
         </nav>
       </header>
 
@@ -44,17 +44,16 @@
             >Επίσκεψη</a
           >
         </p>
-        <!-- <a
-          href="#"
-          id="buttonMain"
-          class="btnMain"
-          >Περισσότερα</a
-        > -->
+
+        <!-- Test button below -->
+        <button class="test third">More</button>
+        <button class="test2 pulse">Pulse</button>
       </main>
 
       <footer class="mt-auto pt-3">
         <p>
-          Δημιουργήθηκε από τον Κωνσταντίνο Ιωάννη Κορναράκη με
+          Δημιουργήθηκε από τον
+          <span id="name">Κωνσταντίνο Ιωάννη Κορναράκη</span> με
           <a href="https://getbootstrap.com/">Bootstrap</a>.
         </p>
       </footer>
@@ -92,14 +91,96 @@
     text-shadow: 0 0 10px rgba(255, 99, 71, 1);
   }
 
-  #mainBtn a{
+  #mainBtn a {
     background-color: rgba(255, 99, 71, 1);
   }
 
-  #mainBtn a:hover{
+  #mainBtn a:hover {
     background-color: white;
     color: rgba(255, 99, 71, 1);
     box-shadow: rgba(255, 99, 71, 0.5);
+  }
+
+  /* Button test below */
+  .test {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 0.6em;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  .test:hover {
+    color: #fff;
+    outline: 0;
+  }
+
+  .test:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+  .third {
+    border-color: blue;
+    color: #fff;
+    box-shadow: 0 0 40px 40px blue inset, 0 0 0 0 blue;
+    transition: all 150ms ease-in-out;
+  }
+
+  .third:hover {
+    box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+  }
+
+  /* Test 2 */
+
+  .pulse:hover,
+  .pulse:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(#fff, 0);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 green;
+    }
+  }
+
+  .test {
+    color: rgba(#ef6eae, 0);
+    transition: 0.25s;
+  }
+
+  .test:hover {
+    border-color: green;
+    color: #fff;
+  }
+
+  .test:focus {
+    border-color: green;
+    color: #fff;
+  }
+
+  .test {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
   }
 
   /* blinking cursor */
@@ -127,5 +208,9 @@
 
   footer {
     border-top: 1.5px dashed rgba(255, 255, 255, 0.1);
+  }
+
+  footer #name {
+    color: rgba(255, 99, 71, 1);
   }
 </style>
