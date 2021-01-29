@@ -46,8 +46,7 @@
         </p>
 
         <!-- Test button below -->
-        <button class="test third">More</button>
-        <button class="test2 pulse">Pulse</button>
+        
       </main>
 
       <footer class="mt-auto pt-3">
@@ -101,7 +100,11 @@
     box-shadow: rgba(255, 99, 71, 0.5);
   }
 
-  
+  #mainBtn a:active {
+    background-color: white;
+    color: rgba(255, 99, 71, 1);
+    box-shadow: rgba(71, 255, 117, 15);
+  }
 
   /* blinking cursor */
   .blinkingCursor {
@@ -110,11 +113,11 @@
     animation-timing-function: cubic-bezier(1, 0, 0, 1);
     animation-duration: 0.75s;
     display: inline-block;
-    width: 4px;
+    width: 5px;
     height: 40px;
     margin-left: 7px;
-    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
-    background: rgba(255, 99, 71, 1);
+    box-shadow: 0 0 10px rgba(228, 194, 188, 0.5);
+    background: rgba(255, 99, 71, 1.0);
   }
 
   @keyframes blinkCursor {
