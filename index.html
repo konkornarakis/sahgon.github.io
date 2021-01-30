@@ -43,8 +43,9 @@
           Η σελίδα παροουσίασης πορτοφολίου είναι υπό κατασκευή. Επισκεφτείτε το
           προφίλ μου στο Github για να δείτε τα ολοκληρωμένα πρότζεκτ μου.
         </p>
-        <p id="mainBtn" class="lead">
+        <p id="mainBtn" class="lead mt-4">
           <a
+            id="realMainBtn"
             href="https://github.com/sahgon/portofolio/tree/master"
             id="buttonMain"
             class="btn btn-lg btn-secondary text-black font-weight-bold"
@@ -112,6 +113,25 @@
     color: rgba(255, 99, 71, 1);
     box-shadow: rgba(71, 255, 117, 15);
   }
+
+  #realMainBtn {
+    animation: glowing 5000ms infinite;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-color: rgba(255, 99, 71, 1);
+      box-shadow: 0 0 3px rgba(255, 99, 71, 1);
+    }
+    50% {
+      background-color: rgba(255, 99, 71, 1);
+      box-shadow: 0 0 40px rgba(255, 99, 71, 1);
+    }
+    100% {
+      background-color: rgba(255, 99, 71, 1);
+      box-shadow: 0 0 3px rgba(255, 99, 71, 1);
+    }
+  } 
 
   /* blinking cursor */
   .blinkingCursor {
