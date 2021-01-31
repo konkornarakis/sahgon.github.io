@@ -23,7 +23,12 @@
         <h3 class="masthead-brand">Portofolio</h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active text-white" href="#">Αρχική</a>
-          <a class="nav-link text-white" href="https://github.com/sahgon/portofolio/tree/master" target="_blank">Projects</a>
+          <a
+            class="nav-link text-white"
+            href="https://github.com/sahgon/portofolio/tree/master"
+            target="_blank"
+            >Projects</a
+          >
           <a class="nav-link text-white" href="#">Επικοινωνία</a>
         </nav>
       </header>
@@ -43,7 +48,7 @@
           Η σελίδα παροουσίασης πορτοφολίου είναι υπό κατασκευή. Επισκεφτείτε το
           προφίλ μου στο Github για να δείτε τα ολοκληρωμένα πρότζεκτ μου.
         </p>
-        <p id="mainBtn" class="lead mt-4">
+        <p id="mainBtn" class="lead mt-5">
           <a
             id="realMainBtn"
             href="https://github.com/sahgon/portofolio/tree/master"
@@ -98,24 +103,23 @@
     text-shadow: 0 0 10px rgba(255, 99, 71, 1);
   }
 
-  #mainBtn a {
+  #realMainBtn {
     background-color: rgba(255, 99, 71, 1);
   }
 
-  #mainBtn a:hover {
-    background-color: white;
-    color: rgba(255, 99, 71, 1);
-    box-shadow: rgba(255, 99, 71, 0.5);
+  #realMainBtn:hover {
+    animation: none;
+    box-shadow: 0 0 50px rgba(255, 99, 71, 1);
   }
 
-  #mainBtn a:active {
+  #realMainBtn:active {
     background-color: white;
     color: rgba(255, 99, 71, 1);
     box-shadow: rgba(71, 255, 117, 15);
   }
 
   #realMainBtn {
-    animation: glowing 5000ms infinite;
+    animation: glowing 4000ms infinite;
   }
 
   @keyframes glowing {
@@ -131,7 +135,7 @@
       background-color: rgba(255, 99, 71, 1);
       box-shadow: 0 0 3px rgba(255, 99, 71, 1);
     }
-  } 
+  }
 
   /* blinking cursor */
   .blinkingCursor {
