@@ -1,0 +1,37 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.nav-info p {
+  color: gold;
+}
+.carousel-item img {
+  height: 880px !important;
+  width: 100% !important;
+}
+
+.fa-phone-alt {
+    color:gold;
+}
+
+.overlay-text {
+  text-align: center;
+  color: gold;
+  z-index: 2;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#footer a {
+  text-decoration: none;
+  color: white;
+}
