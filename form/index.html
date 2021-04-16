@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Εγγραφή | Άσκηση 8</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
+    <script src="/Exercise8/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Εγγραφή χρήστη</h1>
+    </header>
+    <main>
+      <div id="completed">
+        <h2>Ολοκληρώθηκε</h2>
+        <p>Σας ευχαριστούμε για τον χρόνο σας. Τα στοιχεία σας καταγράφηκαν με επιτυχία.</p>
+      </div>
+      <div id="cursor"></div>
+      <form id="regForm" action="/Exercise8/completed.html" method="POST" target="_blank">
+        <ul>
+          <li>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+               ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </li>
+          <li id="firstheaderlist" class="headerlist">
+            <h2>Βασικά στοιχεία</h2>
+          </li>
+          <li>
+            <label for="username">Όνομα χρήστη</label>
+            <input type="text" id="username" autocomplete="on" list="usernamelist" pattern="[A-Za-z0-9]+" placeholder="πχ. user01" required>
+            <datalist id="usernamelist">
+              <option value="admin">
+              <option value="user1">
+              <option value="user2">
+            </datalist>
+          </li>
+          <li>
+            <label for="pw">Κωδικός πρόσβασης</label>
+            <input type="password" id="pw" required>
+          </li>
+          <li>
+            <label for="pw-repeat">Επανάληψη κωδικού πρόσβασης</label>
+            <input type="password" id="pw-repeat" required>
+          </li>
+          <li class="headerlist">
+            <h3>Προσωπικές πληροφορίες</h3>
+          </li>
+          <li>
+            <label for="email">Διεύθυνση email</label>
+            <input type="email" id="email" autocomplete="on" list="emailist" placeholder="πχ. myemail@email.com">
+            <datalist id="emailist">
+              <option value="admin@gmail.com">
+              <option value="user1@gmail.com">
+              <option value="user2@gmail.com">
+            </datalist>
+          </li>
+          <li>
+            <label for="fullname">Ονοματεπώνυμο</label>
+            <input type="text" id="fullname" placeholder="πχ. Γεώργιος Κορναράκης">
+          </li>
+          <li>
+            <label for="borndate">Ημερομηνία γέννησης</label>
+            <input type="date" name="borndate" min="1920-01-01" step="1" id="borndate">
+          </li>
+  
+          <li>
+            <label for="adress">Διεύθυνση</label>
+            <input type="text" id="adress" placeholder="πχ. Χατζοπούλου 12" >
+          </li>
+          <li>
+            <label for="postalcode">Ταχυδρομικός Κώδικας</label>
+            <input type="text" id="postalcode" placeholder="πχ. 20 300" required>
+          </li>
+          <li>
+            <label for="tel">Τηλεφωνικός αριθμός</label>
+            <input type="tel" id="tel" pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im" placeholder="πχ. +30 698 328 8460">
+          </li>
+          <li>
+            <label for="income">Ετήσιο εισόδημα τελευταίου έτους: </label>
+            <input type="range" name="income" id="income" min="1" max="500000" step="100" value="250000">
+            <output for="income"></output>
+          </li>
+          <li>
+            <label for="color">Αγαπημένο χρώμα</label>
+            <input type="color" name="color" id="color">
+          </li>
+          <li class="headerlist">
+            <h3>Ερωτηματολόγιο</h3>
+          </li>
+          <li>
+            <label for="q1">Σε ποια πόλη συναντήθηκαν οι γονείς σας;</label>
+            <input type="text" id="q1" pattern="^[a-zA-Z]" placeholder="πχ. Αθήνα">
+          </li>
+          <li>
+            <label for="q2">Σε ποια πόλη ζει το κοντινότερο άδερφι σας;</label>
+            <input type="text" id="q2" pattern="^[a-zA-Z]" placeholder="πχ. Αθήνα">
+          </li>
+          <li>
+            <label for="q3">Σε ποια πόλη γεννήθηκε ο πατέρας σας;</label>
+            <input type="text" id="q3" pattern="^[a-zA-Z]" placeholder="πχ. Αθήνα">
+          </li>
+          <li>
+            <label for="q4">Σε ποια πόλη ήταν η πρώτη σας δουλειά;</label>
+            <input type="text" id="q4" pattern="^[a-zA-Z]" placeholder="πχ. Λογιστής">
+          </li>
+          <li>
+            <label for="q5">Σε ποια πόλη γεννήθηκε η μητέρα σας;</label>
+            <input type="text" id="q5" pattern="^[a-zA-Z]" placeholder="πχ. Αθήνα">
+          </li>
+          
+          <li>
+            <label for="q6">Σε ποια πόλη ήσασταν την πρωτοχρονιά του 2020;</label>
+            <input type="text" id="q6" pattern="^[a-zA-Z]" placeholder="πχ. Αθήνα">
+          </li>
+          <li>
+            <label for="q7">Ποιο είναι το επίθετο της αγαπημένη σας δασκάλας από το σχολείο;</label>
+            <input type="text" id="q7" pattern="^[a-zA-Z]" placeholder="πχ. Φούφα">
+          </li>
+          <li>
+            <label for="q8">Ποιο είναι το μεσαίο όνομα του πατέρα σας;</label>
+            <input type="text" id="q8" pattern="^[a-zA-Z]" placeholder="πχ. Ιωάννης">
+          </li>
+          <li>
+            <label for="q9">Ποιο είναι το αγαπημένο σας φαγητό;</label>
+            <input type="text" id="q9" pattern="^[a-zA-Z]" placeholder="πχ. Πίτσα">
+          </li>
+          <li>
+            <label for="q10">Ποιο είναι το ονοματεπώνυμο της πνευματικής σας μητέρας;</label>
+            <input type="text" id="q10" pattern="^[a-zA-Z]" placeholder="πχ. Γκλόρια">
+          </li>
+          <li class="headerlist">
+            <h3>Κάτι ακόμα</h3>
+          </li>
+          <li>
+            <label for="browser">Επιλέξτε τον περιηγητή σας από τη λίστα:</label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+              <option value="Edge">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+          </li>
+          <li>
+            <label for="cars">Επιλέξτε μία επωνυμία αυτοκινήτων:</label>
+            <select name="cars" id="cars">
+              <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </optgroup>
+            </select>
+          </li>
+          <li>
+            <label for="description">Δώσε περιγραφή</label>
+            <textarea name="message" id="description" rows="10" cols="30" pattern="^[a-zA-Z]">The cat was playing in the garden.</textarea>
+          </li>
+          <li>
+            <button type="submit" class="btn-grad" id="submit">Υποβολή</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <footer>
+      <p>
+        Δημιουργήθηκε από τον <span>Κωνσταντίνο Ιωάννη Κορναράκη</span>
+        <br>
+        <a href="#">Πίσω στη κορυφή</a>
+      </p>
+    </footer>
+    <script>
+      $(document).ready(function() {
+        $(document).on('mousemove', function(e) {
+          $('#cursor').css({
+            left: e.pageX,
+            top: e.pageY
+          });
+        })
+      });
+    </script>
+  </body>
+</html>

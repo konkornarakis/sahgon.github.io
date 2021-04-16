@@ -1,0 +1,214 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    cursor: none;
+}
+
+body {
+    color: white;
+    font-family: 'M PLUS 1p', sans-serif;
+    letter-spacing: 2px;
+
+    background: linear-gradient(93deg, #94dee2, #c19aee, #f18db5, #5fc7ee);
+    background-size: 600% 600%;
+
+    overflow-x: hidden;
+
+    -webkit-animation: GradientAnimation 20s ease infinite;
+    -moz-animation: GradientAnimation 20s ease infinite;
+    animation: GradientAnimation 20s ease infinite, FadeInAnimation 3s;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    justify-content: center;
+}
+
+@-webkit-keyframes GradientAnimation {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+@-moz-keyframes GradientAnimation {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+@keyframes GradientAnimation {
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+
+@keyframes FadeInAnimation {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+footer, header, main, ul, ul li, #completed {
+    /* border-top: 2px solid white;
+    border-top-width: 50%; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+#completed {
+    text-decoration: none;
+    font-size: medium;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+main p {
+    font-size: 1.1em;
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: absolute;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color:cornflowerblue;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul li {
+    text-align: center;
+    font-size: 1.1em;
+
+    margin-top: 1.3em;
+    /* margin-top: 22px;  */
+    padding: 0;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+ul li * {
+    /* margin-top: 18px;  */
+    margin-top: 1em;
+}
+
+header h1 {
+    border-bottom: 2px solid white;
+    width: 75%;
+    padding: 30px;
+}
+
+footer p {
+    font-size: medium;
+    border-top: 2px solid white;
+    width: 75%;
+    padding: 30px;
+}
+
+footer p span {
+    color: palevioletred;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="date"], select, textarea {
+    width: 18em; 
+    /* width: 250px */
+    background: none;
+    border: 2px solid white;
+    border-radius: 3px;
+    color: pink;
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+
+    height: 2em;
+    transition: background-color 1s ease-out;
+}
+
+ul li input[type="date"] {
+    height: 2rem;
+    width: 18rem;
+}
+
+ul li button[type="submit"] {
+    width: fit-content;
+    font-size: 1em;
+    padding: 1em 3em;
+    transition: background-color 2s ease-out, color 1s ease-out;
+    margin: 55px;
+    font-weight: bold;
+
+}
+
+ul li button[type="submit"]:hover {
+    background-color: white;
+    color: pink;
+}
+
+/* ul li input {
+    height: 2em;
+    transition: background-color 1s ease-out;
+} */
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+ul li input:focus {
+    background-color: white;
+    width: 300px;
+    height: 40px;
+}
+
+ul li p {
+    width: 65%;
+}
+
+textarea {
+    transition: background-color 2s ease-out;
+    font-size: medium;
+}
+
+textarea:focus {
+    background-color: white;
+    color: pink;
+}
+
+.headerlist {
+    /* margin-top: 100px;  */
+    margin-top: 6.5em;
+    border-top: 2px solid white;
+}
+
+#firstheaderlist {
+    padding-top: 0;
+}
+
+#completed h2 {
+    border-bottom: 2px solid white;
+    width: fit-content
+}
+/* input.invalid {
+    border: 2px solid red;
+} */
+
+/* input[type="text"]:valid ~ .input-validation::before {
+    content: "✓";
+    color: green;
+} */
