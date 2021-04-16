@@ -126,7 +126,7 @@ footer p span {
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="date"], select, textarea {
+input, input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="date"], select, textarea {
     width: 18em; 
     /* width: 250px */
     background: none;
@@ -147,6 +147,10 @@ ul li input[type="date"] {
 }
 
 ul li button[type="submit"] {
+    background: none;
+    color: pink;
+    border: 2px solid white;
+    border-radius: 3px;
     width: fit-content;
     font-size: 1em;
     padding: 1em 3em;
@@ -183,6 +187,8 @@ ul li p {
 textarea {
     transition: background-color 2s ease-out;
     font-size: medium;
+    width: 100%;
+    height: 100%;
 }
 
 textarea:focus {
